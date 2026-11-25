@@ -60,50 +60,6 @@ Four ~30-day CryoSat-2 sub-cycles (10, 29, 37, 55) spanning December 2010 – Ju
 └── LICENSE
 ```
 
-## Usage
-
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-# 1. Download CryoSat-2 and Jason-2 pass files from RADS into ./data
-#    (not redistributed here). Columns used: 1=latitude, 2=longitude, 3=SLA.
-
-# 2. Find cross-overs (defaults: CryoSat-2 cycle 029 with Jason-2 cycle 145)
-python src/xover_finder.py data/ -o xover_finder.csv
-
-#    Other cycles / patterns:
-python src/xover_finder.py data/ \
-    --cryo-pattern 'c2p0[0-9][0-9][0-9]c055*.asc' \
-    --jason-pattern 'j2p0[0-9][0-9][0-9]c221*.asc'
-
-# 3. Plot
-python scripts/plot_xover.py xover_finder.csv dsla.png
-
-python scripts/plot_global_map.py xover_finder.csv map_dsla.png
-python scripts/plot_global_map.py xover_finder.csv map_cryo.png --variable sla_cryosat
-
-# Try the plots/notebook without RADS data (synthetic numbers, not scientific)
-python scripts/make_synthetic_data.py synthetic_xovers.csv
-jupyter notebook notebooks/crossover_analysis_example.ipynb
-
-# Tests
-pytest
-```
-
-Output CSV columns: `lat, lon, sla_cryosat, sla_jason, dsla, ssr_cryosat, r2_cryosat, ssr_jason, r2_jason`.
-
-### Notes on the port
-
-The original 2014 script targeted Python 2.7 / SciPy 0.14. This version:
-
-- runs on Python 3 and current NumPy/SciPy, with a command-line interface instead of hard-coded settings;
-- replaces `UnivariateSpline` with `numpy.polyfit(deg=3)`. With four points and a cubic these give the same exact interpolant (thesis Table 5), but `polyfit` does not require longitudes to be monotonically increasing;
-- skips pass pairs whose bounding boxes cannot be within 0.06° (a speed-up with no effect on results) and caches loaded passes;
-- writes a headed, comma-separated file instead of a space-delimited one.
-
-**Known limitations:** tracks are fitted as latitude = *m*·longitude + *c*, which becomes ill-conditioned for near-meridional tracks, and longitude wrap-around at ±180° is not handled.
-
 ## Reference
 
 Garcia Garcia, P. (2014). *Validation of CryoSat-2 satellite altimeter data over the ocean.* MSc dissertation, University College London.
@@ -114,4 +70,4 @@ Supervisor Prof. Marek Ziebart; CGG for sponsoring the MSc; the Delft Institute 
 
 ## Contact
 
-Pablo García García · <!-- add current email / LinkedIn --> 
+Pablo García García · https://www.linkedin.com/in/garpablo/<!-- add current email / LinkedIn --> 
