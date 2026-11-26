@@ -33,6 +33,11 @@ Four ~30-day CryoSat-2 sub-cycles (10, 29, 37, 55) spanning December 2010 – Ju
   <em>Cross-over SLA differences, cycle 29 (thesis Fig. 29)</em>
 </p>
 
+<p align="center">
+  <img src="docs/images/fig_sla_difference.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
+  <em>Cross-over SLA differences, cycle 29 </em>
+</p>
+
 ## Method
 
 1. **Closest-point search.** A cKD-tree finds the nearest pair of measurements between a CryoSat-2 and a Jason-2 pass. Pairs further apart than 0.06° are discarded.
@@ -70,4 +75,4 @@ Supervisor Prof. Marek Ziebart; CGG for sponsoring the MSc; the Delft Institute 
 
 ## Contact
 
-Pablo García García · https://www.linkedin.com/in/garpablo/<!-- add current email / LinkedIn --> 
+Pablo García García · https://www.linkedin.com/in/garpablo/<
