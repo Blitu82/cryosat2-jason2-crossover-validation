@@ -29,13 +29,13 @@ Four ~30-day CryoSat-2 sub-cycles (10, 29, 37, 55) spanning December 2010 – Ju
 - **Noise vs. waves:** the spread grows with significant wave height, e.g. in the Southern Ocean.
 
 <p align="center">
-  <img src="docs/images/fig_global_dsla_c29.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
-  <em>Cross-over SLA differences, cycle 29 (thesis Fig. 29)</em>
+  <img src="docs/images/fig_sla_differences.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
+  <em>Cross-over SLA differences, cycle 29 </em>
 </p>
 
 <p align="center">
-  <img src="docs/images/fig_sla_differences.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
-  <em>Cross-over SLA differences, cycle 29 </em>
+  <img src="docs/images/fig_global_dsla_c29.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
+  <em>Cross-over SLA differences (thesis Fig. 29)</em>
 </p>
 
 ## Method
