@@ -1,4 +1,4 @@
-# Validation of CryoSat-2 altimeter data over the ocean
+# Validation of CryoSat-2 satellite altimeter data over the ocean
 
 **MSc Hydrographic Surveying, University College London (UCL)** · Dept. of Civil, Environmental & Geomatic Engineering
 **Author:** Pablo García García · **Supervisor:** Prof. Marek Ziebart · **Submitted:** 8 September 2014
