@@ -34,7 +34,7 @@ Four ~30-day CryoSat-2 sub-cycles (10, 29, 37, 55) spanning December 2010 – Ju
 </p>
 
 <p align="center">
-  <img src="docs/images/fig_sla_difference.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
+  <img src="docs/images/fig_sla_differences.png" width="620" alt="Global map of cross-over SLA differences, cycle 29"><br>
   <em>Cross-over SLA differences, cycle 29 </em>
 </p>
 
